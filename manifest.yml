@@ -1,0 +1,14 @@
+---
+applications:
+- name: safespot
+  framework: node
+  runtime: node010
+  memory: 128M
+  instances: 1
+  url: safespot.${target-base}
+  path: .
+  services:
+    safespotMysql:
+      vendor: mysql
+      version: '5.1'
+      tier: free
